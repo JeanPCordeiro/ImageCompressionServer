@@ -1,0 +1,140 @@
+    1  ls
+    2  cd
+    3  vi .bash
+    4  vi .bashrc
+    5  vi .bashrc
+    6  ls
+    7  pwd
+    8  npm install
+    9  npm run build
+   10  npm run start
+   11  touch main.js
+   12  node main.js 
+   13  sudo apt-get install graphicsmagick
+   14  npm install gm
+   15  npm install
+   16  npm run build
+   17  npm run start
+   18  ps
+   19  ls
+   20  ls -l
+   21  node main.js 
+   22  npm install
+   23  gm
+   24  sudo apt-get install graphicsmagick
+   25  top
+   26  gm
+   27  gm convert
+   28  gm help convert
+   29  gm
+   30  gm identify initial.png 
+   31  gm convert -quality 95 initial.png q95.png
+   32  ll
+   33  gm identify initial.png 
+   34  gm convert initial.png +dither -depth 8 -colors 50 comp.png
+   35  ll
+   36  gm identify comp.png 
+   37  gm identify initial.png 
+   38  gm identify -format "file_size:%b,unique_colors:%k,bit_depth:%q" initial.png 
+   39  gm convert initial.png +dither -depth 8 -colors 16 comp2.png
+   40  ll
+   41  npm install sharp
+   42  curl -O https://assets.digitalocean.com/how-to-process-images-in-node-js-with-sharp/sammy.png
+   43  curl -O https://assets.digitalocean.com/how-to-process-images-in-node-js-with-sharp/underwater.png
+   44  curl -O https://assets.digitalocean.com/how-to-process-images-in-node-js-with-sharp/sammy-transparent.png
+   45  ll
+   46  touch ReadImage.js
+   47  node ReadImage.js 
+   48  ll
+   49  node ReadImage.js 
+   50  ll
+   51  node ReadImage.js 
+   52  ll
+   53  node ReadImage.js 
+   54  ll
+   55  node ReadImage.js 
+   56  ll
+   57  mkdir layer
+   58  cd layer/
+   59  ls
+   60  npm init -y
+   61  npm install --arch=x64 --platform=linux sharp
+   62  pwd
+   63  ls
+   64  gzip . ../LayerSharp.zip
+   65  gzip -help
+   66  gzip * ../LayerSharp.zip
+   67  tar -cvf ../LayerSharp.tar .
+   68  cd ..
+   69  mkdir LayerSharp
+   70  cd LayerSharp/
+   71  npm init -y
+   72  npm install --arch=x64 --platform=linux sharp
+   73  tar -cvf ../LayerSharp.tar .
+   74  cd ..
+   75  ls
+   76  gzip LayerSharp.tar 
+   77  ll
+   78  ll -h
+   79  cd LayerSharp/
+   80  tar -zcvf ../LayerSharp .
+   81  tar -czvf ../LayerSharp.tar.gz .
+   82  cd ..
+   83  ll
+   84  cd LayerSharp/
+   85  tar -cjvf ../LayerSharp.tar.gz .
+   86  ll ..
+   87  tar -cJvf ../LayerSharp.tar.gz .
+   88  ll ..
+   89  aws
+   90  sudo apt install aws-cli
+   91  sudo apt install awscli
+   92  aws configure
+   93  aws s3 list
+   94  aws s3 ls
+   95  aws s3api create-bucket --bucket DNC-INPUT-BUCKET --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+   96  aws s3api create-bucket --bucket dnc-input-bucket --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+   97  aws s3 ls
+   98  aws s3api create-bucket --bucket cats-dnc-input-bucket --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+   99  aws s3api create-bucket --bucket cats-dnc-resize-bucket --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+  100  aws s3 ls
+  101  cd ..
+  102  ls
+  103  aws s3api put-object --bucket cats-dnc-input-bucket --keyinitial.png -body ./initial.png
+  104  aws s3api put-object --bucket cats-dnc-input-bucket --key initial.png --body ./initial.png
+  105  touch policy.json
+  106  aws iam create-policy --policy-name LambdaS3Policy --policy-document file://policy.json
+  107  touch trust-policy.json
+  108  aws iam create-role --role-name LambdaS3Role --assume-role-policy-document file://trust-policy.json
+  109  aws s3 ls
+  110  history
+  111  aws s3api create-bucket --bucket cats-dnc-bucket --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+  112  aws s3api create-bucket --bucket cats-dnc-bucket-resized --region eu-west-3 --create-bucket-configuration LocationConstraint=eu-west-3
+  113  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  114  aws lambda add-permission --function-name CompressFile --principal s3.amazonaws.com --statement-id s3invoke --action "lambda:InvokeFunction" --source-arn arn:aws:s3:::cats-dnc-bucket
+  115  touch notification.json
+  116  aws s3api put-bucket-notification-configuration --bucket cats-dnc-bucket --notification-configuration file://notification.json
+  117  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  118  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./comp.png
+  119  aws s3api put-object --bucket cats-dnc-bucket --key comp.png --body ./comp.png
+  120  aws 3 list
+  121  aws s3 list
+  122  aws s3 ls
+  123  aws s3api put-object --bucket cats-dnc-bucket --key comp.png --body ./comp.png
+  124  aws iam attach-role-policy --role-name LambdaS3Role --policy-arn arn:aws:iam::457179661065:policy/LambdaS3Policy
+  125  aws s3api put-object --bucket cats-dnc-bucket --key comp.png --body ./comp.png
+  126  ll
+  127  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  128  ll
+  129  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  130  ll
+  131  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.pngll -h
+  132  ll -h
+  133  node ReadImage.js 
+  134  ll -h
+  135  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  136  node ReadImage.js 
+  137  ll
+  138  ll -h
+  139  aws s3api put-object --bucket cats-dnc-bucket --key initial.png --body ./initial.png
+  140  history >> history

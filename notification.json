@@ -1,0 +1,9 @@
+{
+    "LambdaFunctionConfigurations": [
+        {
+          "Id": "CreateThumbnailEventConfiguration",
+          "LambdaFunctionArn": "arn:aws:lambda:eu-west-3:457179661065:function:CompressFile",
+          "Events": [ "s3:ObjectCreated:Put" ]
+        }
+      ]
+    }
